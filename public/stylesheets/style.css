@@ -1,0 +1,265 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+
+body {
+  font-family: sans-serif;
+}
+/* 
+main  {
+  margin:0;
+} */
+
+.navbar {
+  overflow: hidden;
+  background-color: #272d38;
+}
+
+
+.navbar a, .navbar h3, input {
+  float: left;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn , input{
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  min-width: 130px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn ,input:hover{
+  color: #82c7a5;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+#clear  {
+  float: right;
+}
+
+table  {
+  margin: 6px 6px ;
+}
+
+td  {
+  border: 1px solid #7c7c7c;
+  height: 30px;
+  width: 30px;
+}
+
+.wall {
+  background: rgba(128, 128, 128, 0.90);
+  animation: wallAnimate 0.1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes wallAnimate {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 80%;
+  }
+
+  50% {
+    transform: scale(1.4);
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.25)
+  }
+
+  100% {
+  transform: scale(1);
+  background-color: rgba(128, 128, 128, 0.75);
+  border-radius: 0%;
+  }
+}
+
+
+.visited {
+  background: rgba(18, 88, 220, 0.75);
+  animation: visitNode 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes visitNode {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(251, 134, 4, 1);
+    border-radius: 80%;
+  }
+
+  75% {
+    transform: scale(1.4);
+    border-radius: 50%;
+    background-color: rgba(134.5, 111, 112, 0.25);
+  }
+
+  100% {
+  transform: scale(1);
+  background-color: rgba(18, 88, 220, 0.75);
+  border-radius: 0%;
+  }
+}
+
+
+/*
+.path {
+    background: rgba(18, 88, 220, 0.75);
+    animation: pathnode 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pathnode {
+    100% {
+        transform: scale(1);
+        background-color: rgba(251, 134, 4, 1);
+        border-radius: 0%;
+    }
+
+    75% {
+        transform: scale(1.4);
+        border-radius: 50%;
+        background-color: rgba(134.5, 111, 112, 0.25);
+    }
+
+    0% {
+        transform: scale(0.3);
+        background-color: rgba(18, 88, 220, 0.75);
+        border-radius: 80%;
+    }
+}
+*/
