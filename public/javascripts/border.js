@@ -41,8 +41,8 @@ Board.prototype.Creategrid = function () {
 	this.start.value = 0;
 	this.end = this.nodeArray[erid][ecid];
   	document.getElementById("main").innerHTML = string;
-  	document.getElementById("" + srid + "-" + scid).style.background = "url('./public/images/start2.svg')  no-repeat";
-	document.getElementById("" + erid + "-" + ecid).style.background = "url('./public/images/end.svg')  no-repeat";
+  	document.getElementById("" + srid + "-" + scid).style.background = "url('/public/images/start2.svg')  no-repeat";
+	document.getElementById("" + erid + "-" + ecid).style.background = "url('/public/images/end.svg')  no-repeat";
 
 }
 
@@ -105,7 +105,7 @@ Board.prototype.ActionListeners = function () {
 				else {
 					board.start = node;
 					node.value = 0;
-					document.getElementById(event.target.id).style.background = "url('./public/images/start2.svg')  no-repeat";
+					document.getElementById(event.target.id).style.background = "url('/public/images/start2.svg')  no-repeat";
 				}
 			}
 			else if (nodeType === "end") {
@@ -115,7 +115,7 @@ Board.prototype.ActionListeners = function () {
 				}
 				else {
 					board.end = node;
-					document.getElementById(event.target.id).style.background = "url('./public/images/end.svg')  no-repeat";
+					document.getElementById(event.target.id).style.background = "url('/public/images/end.svg')  no-repeat";
 				}
 			}
 		}

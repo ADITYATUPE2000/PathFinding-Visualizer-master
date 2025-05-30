@@ -20,6 +20,7 @@ async function A_star (Board) {
 
       if (temp.fscore < fscore) {
         node = temp;
+        
         fscore = temp.fscore;
       }
 
