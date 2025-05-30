@@ -4,8 +4,13 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: false }));
+
+// Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/javascripts', express.static(path.join(__dirname, 'public/javascripts')));
+app.use('/stylesheets', express.static(path.join(__dirname, 'public/stylesheets')));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));

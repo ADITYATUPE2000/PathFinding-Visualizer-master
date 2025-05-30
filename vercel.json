@@ -9,7 +9,31 @@
   "routes": [
     {
       "src": "/public/(.*)",
-      "dest": "/public/$1"
+      "dest": "/public/$1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate"
+      }
+    },
+    {
+      "src": "/javascripts/(.*)",
+      "dest": "/public/javascripts/$1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate"
+      }
+    },
+    {
+      "src": "/stylesheets/(.*)",
+      "dest": "/public/stylesheets/$1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate"
+      }
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate"
+      }
     },
     {
       "src": "/(.*)",
